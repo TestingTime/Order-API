@@ -30,18 +30,34 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | gender  	| Gender mix if relevant.  	| string  	| female<br/>male<br/>mixed  	|   	|
 | languages  	| Languages a test user needs to speak at least fluently  	| string  	| de<br/>fr<br/>en<br/>it<br/>nl  	| Comma separated if multiple. Max 2.  	|
 | countries  	| Countries where the test users have to currently live at. 	| string  	| 2 digit ISO-Code - lowercase| Comma separated if multiple. Max 10.	|
+| contact-firstname  	| Customer contacts (study conductor) first name 	| string  	| 	|
+| contact-lastname  	| Customer contacts (study conductor) last name 	| string  	| 	|
+| contact-email  	| Customer contacts (study conductor) email 	| string  	| 	|
+| contact-phone  	| Customer contacts (study conductor) phone 	| string  	| 	|
+| billing-company  	| Customer billing address - company name 	| string  	| 	|
+| billing-address  	| Customer billing address - address line 1 	| string  	| 	|
+| billing-address2  	| Customer billing address - address line 2 	| string  	| 	|
+| billing-zip  	| Customer billing address - zip code 	| string  	| 	|
+| billing-city  	| Customer billing address - city name 	| string  	| 	|
+| billing-country  	| Customer billing address - country 	| string  	| 2 digit ISO-Code - lowercase	|
+| billing-instructions  	| Customer billing reference number 	| string  	| 	|
+| billing-email  	| Customer billing email address	| string  	| 	|
+| location-company  	| Location of study - company name	| string  	| 	|
+| location-address  	| Location of study - address line	| string  	| 	|
+| location-zip  	| Location of study - zip code	| string  	| 	|
+| location-city  	| Location of study - city name	| string  	| 	|
+| location-company  	| Location of study - company name	| string  	| 	|
+| location-country  	| Location of study - country	| string  	| 2 digit ISO-Code - lowercase	|
+| location-instructions  	| Location of study - description how to find the location	| string  	| e.g. "ask at the reception for John Meyer"	|
 
 
 
 
 
 ### Not yet documented
-            "countries", "contact-firstname", "contact-lastname", "contact-email",
-            "contact-phone", "devices", "platform", "customs", "duration", "link", "info", "priority",
+            "devices", "platform", "customs", "duration", "link", "info", "priority",
             "minutes", "contactVia", "contactViaDetails", "description", "expert-exclusion", "title", "venue",
-            "billing-company", "billing-address", "billing-address2", "billing-zip", "billing-city", "billing-country",
-            "billing-instructions", "billing-email", "location-company", "location-address",
-            "location-zip", "location-city", "location-country", "location-instructions", "deadline",
+             "deadline",
             "priority", "link", "survey-by-redirect", "final-survey", "frequency", "slots", "inHomeModeOfTransport",
             "inviteRadius"
             
