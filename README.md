@@ -48,7 +48,7 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | location-city  	| Location of study - city name	| string  	| 	|
 | location-company  	| Location of study - company name	| string  	| 	|
 | location-country  	| Location of study - country	| string  	| 2 digit ISO-Code - lowercase	|
-| location-instructions  	| Location of study - description how to find the location	| string  	| e.g. "ask at the reception for John Meyer"	|
+| location-instructions  	| Location of study - description how to find the location	| string  |	 | e.g. "ask at the reception for John Meyer"	|
 
 
 
