@@ -28,12 +28,15 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | min-age   	| Minimal age of the ordered participants.   	| number   	| 18-85  	| Only works if you provide a max-age as well  	|
 | max-age  	| Maximal age of the ordered participants.  	| number  	| 18-85  	| Only works if you provide a min-age as well. Must be at least 10 years more than the min-age.  	|
 | gender  	| Gender mix if relevant.  	| string  	| female<br/>male<br/>mixed  	|   	|
+| languages  	| Languages a test user needs to speak at least fluently  	| string  	| de<br/>fr<br/>en<br/>it<br/>nl  	| Comma separated if multiple. Max 2.  	|
+| countries  	| Countries where the test users have to currently live at. 	| string  	| 2 digit ISO-Code - lowercase| Comma separated if multiple. Max 10.	|
+
 
 
 
 
 ### Not yet documented
-            "languages", "countries", "contact-firstname", "contact-lastname", "contact-email",
+            "countries", "contact-firstname", "contact-lastname", "contact-email",
             "contact-phone", "devices", "platform", "customs", "duration", "link", "info", "priority",
             "minutes", "contactVia", "contactViaDetails", "description", "expert-exclusion", "title", "venue",
             "billing-company", "billing-address", "billing-address2", "billing-zip", "billing-city", "billing-country",
