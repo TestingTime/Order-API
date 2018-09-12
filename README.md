@@ -34,8 +34,10 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | customs  	| Special criteria for the participants. 	| string  	| Max 140 characters each | Comma separated, max 5.  |  |
 | minutes  	| Duration of each study	| number  	| 10-5000 |  |  |
 | title  	| Study title	| string  	| Max 255 characters |  |  |
-| description  	| Additional information for the TestingTime recruiters	| string  	| |  |  |
-| venue  	| Where does the study happen	| string  	| IN_HOME<br/>IN_HOUSE<br/>REMOTE |  |  |
+| description  	| Additional information for the TestingTime recruiters	| string  	| |  |  
+| venue  	| Where does the study happen	| string  	| IN_HOME<br/>IN_HOUSE<br/>REMOTE |  |  
+| devices  	| On what devices do the participants need to be "native" at	| string  	| computer<br/>tablet<br/>phone<br/>watch | Comma separated strings | 
+| platform  	| What OS needs to be installed on the devices	| string  	| apple<br/>android<br/>windows | Only works if "devices" is provided | 
 | contact-firstname  	| Customer contacts (study conductor) first name 	| string  	| 	|
 | contact-lastname  	| Customer contacts (study conductor) last name 	| string  	| 	|
 | contact-email  	| Customer contacts (study conductor) email 	| string  	| 	|
@@ -55,13 +57,16 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | location-company  	| Location of study - company name	| string  	| 	|
 | location-country  	| Location of study - country	| string  	| 2 digit ISO-Code - lowercase	|
 | location-instructions  	| Location of study - description how to find the location	| string  |	 | e.g. "ask at the reception for John Meyer"	|
+| duration  	| How long does it take to fill out the entire survey or unmoderated user test.	| number  |	10-500 | Only works its a survey or an unmoderated user test.	|
+| link  	| The link to the survey or unmoderated user test.	| string  |	 | Only works its a survey or an unmoderated user test. If link & priority are provided for a method type "user test" it becomes automatically an unmoderated user test.	|
+| priority  	| How fast do we need to deliver the participants	| string  |	normal<br/>express<br/>emergency | Only works its a survey or an unmoderated user test.	|
+
 
 
 
 
 
 ### Not yet documented
-            "devices", "platform", "duration", "link", "info", "priority",
             "contactVia", "contactViaDetails", "expert-exclusion", 
              "deadline",
             "priority", "link", "survey-by-redirect", "final-survey", "frequency", 
@@ -72,7 +77,7 @@ Many fields on the order form can be prefilled. Here are all the supported param
 
 If you prefill all necessary information, you can choose the step of the order form that is shown at first.
 
-| Value   	| Step-No   	| Description   |
+| Value   	| Step   	| Description   |
 |---	|---	|---	|
 | #!/profile | 1 | Default - Select the users basic profile |
 | #!/setup | 2 | Setup for your study<br/>Not available on method "survey" |
