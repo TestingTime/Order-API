@@ -31,7 +31,7 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | languages  	| Languages a test user needs to speak at least fluently  	| string  	| de<br/>fr<br/>en<br/>it<br/>nl  	| Comma separated if multiple. Max 2.  	|
 | countries  	| Countries where the test users have to currently live at. 	| string  	| 2 digit ISO-Code - lowercase| Comma separated if multiple. Max 10.	|
 | slots  	| List of all dates when the study will be conducted 	| string  	| timestamp | Comma separated numbers |  |
-| customs  	| Special criteria for the participants. 	| string  	| Max 140 characters each | Comma separated, max 5.  |  |
+| customs  	| Special criteria for the participants. 	| string  	| Maximum length of 140 characters each | Comma separated, max 5.  |  |
 | minutes  	| Duration of each study	| number  	| 10-5000 |  |  |
 | title  	| Study title	| string  	| Max 255 characters |  |  |
 | description  	| Additional information for the TestingTime recruiters	| string  	| |  |  
@@ -60,18 +60,22 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | duration  	| How long does it take to fill out the entire survey or unmoderated user test.	| number  |	10-500 | Only works its a survey or an unmoderated user test.	|
 | link  	| The link to the survey or unmoderated user test.	| string  |	 | Only works its a survey or an unmoderated user test. If link & priority are provided for a method type "user test" it becomes automatically an unmoderated user test.	|
 | priority  	| How fast do we need to deliver the participants	| string  |	normal<br/>express<br/>emergency | Only works its a survey or an unmoderated user test.	|
-
+| contactVia  	| The tool in which the remote study will take place (e.g. Skype, Google Hangouts)	| string  	| Maximum length of 120 characters	|
+| contactViaDetails  	| The id of the customer for the given tool	| string  	| 	|
+| expert-exclusion  	| Plain text description of which experts to exclude (e.g. No UX designers)	| string  	| 	|
+| deadline  	| Deadline of study (Valid only for surveys)	| timestamp  	| 	|
+| priority  	| The priority of the study (Applicable to surveys/ unmoderated user tests), possible values are NORMAL, PRIORITY, EMERGENCY	| string  	| 	|
+| survey-by-redirect  	| Flag about whether the test person should be redirected to the survey 	| boolean  	| 	|
+| frequency  	| The frequency of entries needed for a diary (e.g. a frequency of 1 means there will be sessions every day)	| number  	| 	|
+| inHomeModeOfTransport  	| Customer transport means for inhome tests (possible values are CAR / PUBLIC)	| string  	| 	|
+| inviteRadius  	| The radius in which to invite test persons for an inhome study	| number  	| 	|
 
 
 
 
 
 ### Not yet documented
-            "contactVia", "contactViaDetails", "expert-exclusion", 
-             "deadline",
-            "priority", "link", "survey-by-redirect", "final-survey", "frequency", 
-            "inHomeModeOfTransport",
-            "inviteRadius"
+          "final-survey"
             
 ## Hashtag navigation
 
