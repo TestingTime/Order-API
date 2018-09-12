@@ -30,6 +30,12 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | gender  	| Gender mix if relevant.  	| string  	| female<br/>male<br/>mixed  	|   	|
 | languages  	| Languages a test user needs to speak at least fluently  	| string  	| de<br/>fr<br/>en<br/>it<br/>nl  	| Comma separated if multiple. Max 2.  	|
 | countries  	| Countries where the test users have to currently live at. 	| string  	| 2 digit ISO-Code - lowercase| Comma separated if multiple. Max 10.	|
+| slots  	| List of all dates when the study will be conducted 	| string  	| timestamp | Comma separated numbers |  |
+| customs  	| Special criteria for the participants. 	| string  	| Max 140 characters each | Comma separated, max 5.  |  |
+| minutes  	| Duration of each study	| number  	| 10-5000 |  |  |
+| title  	| Study title	| string  	| Max 255 characters |  |  |
+| description  	| Additional information for the TestingTime recruiters	| string  	| |  |  |
+| venue  	| Where does the study happen	| string  	| IN_HOME<br/>IN_HOUSE<br/>REMOTE |  |  |
 | contact-firstname  	| Customer contacts (study conductor) first name 	| string  	| 	|
 | contact-lastname  	| Customer contacts (study conductor) last name 	| string  	| 	|
 | contact-email  	| Customer contacts (study conductor) email 	| string  	| 	|
@@ -55,10 +61,11 @@ Many fields on the order form can be prefilled. Here are all the supported param
 
 
 ### Not yet documented
-            "devices", "platform", "customs", "duration", "link", "info", "priority",
-            "minutes", "contactVia", "contactViaDetails", "description", "expert-exclusion", "title", "venue",
+            "devices", "platform", "duration", "link", "info", "priority",
+            "contactVia", "contactViaDetails", "expert-exclusion", 
              "deadline",
-            "priority", "link", "survey-by-redirect", "final-survey", "frequency", "slots", "inHomeModeOfTransport",
+            "priority", "link", "survey-by-redirect", "final-survey", "frequency", 
+            "inHomeModeOfTransport",
             "inviteRadius"
             
 ## Hashtag navigation
