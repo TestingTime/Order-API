@@ -57,14 +57,13 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | location-company  	| Location of study - company name	| string  	| 	|
 | location-country  	| Location of study - country	| string  	| 2 digit ISO-Code - lowercase	|
 | location-instructions  	| Location of study - description how to find the location	| string  |	 | e.g. "ask at the reception for John Meyer"	|
-| duration  	| How long does it take to fill out the entire survey or unmoderated user test.	| number  |	10-500 | Only works its a survey or an unmoderated user test.	|
+| duration  	| The amount of time users need to complete a survey or unmoderated user test.	| number  |	10-500 | Only works its a survey or an unmoderated user test.	|
 | link  	| The link to the survey or unmoderated user test.	| string  |	 | Only works its a survey or an unmoderated user test. If link & priority are provided for a method type "user test" it becomes automatically an unmoderated user test.	|
-| priority  	| How fast do we need to deliver the participants	| string  |	normal<br/>express<br/>emergency | Only works its a survey or an unmoderated user test.	|
+| priority  	| The priority of the study (Applicable to surveys/ unmoderated user tests)	| string  |	normal<br/>express<br/>emergency | Only works its a survey or an unmoderated user test.	|
 | contactVia  	| The tool in which the remote study will take place (e.g. Skype, Google Hangouts)	| string  	| Maximum length of 120 characters	|
 | contactViaDetails  	| The id of the customer for the given tool	| string  	| 	|
 | expert-exclusion  	| Plain text description of which experts to exclude (e.g. No UX designers)	| string  	| 	|
 | deadline  	| Deadline of study (Valid only for surveys/unmoderated user tests)	| timestamp  	| 	|
-| priority  	| The priority of the study (Applicable to surveys/ unmoderated user tests), possible values are NORMAL, PRIORITY, EMERGENCY	| string  	| 	|
 | survey-by-redirect  	| Flag about whether the test person should be redirected to the survey 	| boolean  	| 	|
 | frequency  	| The frequency of entries needed for a diary (e.g. a frequency of 2 means there will be sessions every two days until the deadline)	| number  	| 	|
 | inHomeModeOfTransport  	| Customer transport means for inhome tests (possible values are CAR / PUBLIC)	| string  	| 	|
