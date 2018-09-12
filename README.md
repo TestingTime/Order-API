@@ -60,14 +60,14 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | duration  	| The amount of time users need to complete a survey or unmoderated user test.	| number  |	10-500 | Only works its a survey or an unmoderated user test.	|
 | link  	| The link to the survey or unmoderated user test.	| string  |	 | Only works its a survey or an unmoderated user test. If link & priority are provided for a method type "user test" it becomes automatically an unmoderated user test.	|
 | priority  	| The priority of the study (Applicable to surveys/ unmoderated user tests)	| string  |	normal<br/>express<br/>emergency | Only works its a survey or an unmoderated user test.	|
-| contactVia  	| The tool in which the remote study will take place (e.g. Skype, Google Hangouts)	| string  	| Maximum length of 120 characters	|
-| contactViaDetails  	| The id of the customer for the given tool	| string  	| 	|
+| contact-via  	| The tool in which the remote study will take place (e.g. Skype, Google Hangouts)	| string  	| Maximum length of 120 characters	|
+| contact-via-details  	| The id of the customer for the given tool	| string  	| 	|
 | expert-exclusion  	| Plain text description of which experts to exclude (e.g. No UX designers)	| string  	| 	|
 | deadline  	| Deadline of study (Valid only for surveys/unmoderated user tests)	| timestamp  	| 	|
 | survey-by-redirect  	| Flag about whether the test person should be redirected to the survey 	| boolean  	| 	|
 | frequency  	| The frequency of entries needed for a diary (e.g. a frequency of 2 means there will be sessions every two days until the deadline)	| number  	| 	|
-| inHomeModeOfTransport  	| Customer transport means for inhome tests (possible values are CAR / PUBLIC)	| string  	| 	|
-| inviteRadius  	| The radius in which to invite test persons for an inhome study	| number  	| 	|
+| in-home-mode-of-transport  	| Customer transport means for inhome tests (possible values are CAR / PUBLIC)	| string  	| 	|
+| invite-radius  	| The radius in which to invite test persons for an inhome study	| number  	| 	|
 
 
 
