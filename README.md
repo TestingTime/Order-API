@@ -4,7 +4,7 @@ Documentation for the Prefill-API of our order form
 
 ## Url
 
-Our orderform can be accessed in 3 languages: English, German & French
+The TestingTime orderform can be accessed in 3 different languages: English, German & French
 
 English: https://app.testingtime.com/en/order-testusers/{amount-of-users}/{method}<br/>
 German: https://app.testingtime.com/de/testpersonen-bestellen/{amount-of-users}/{method}<br/>
@@ -25,15 +25,15 @@ Many fields on the order form can be prefilled. Here are all the supported param
 
 | Parameter   	| Description   	| Type   	| Constraints   	| Other  	|
 |---	|---	|---	|---	|---	|
-| min-age   	| Minimal age of the ordered participants.   	| number   	| 18-85  	| Only works if you provide a max-age as well  	|
-| max-age  	| Maximal age of the ordered participants.  	| number  	| 18-85  	| Only works if you provide a min-age as well. Must be at least 10 years more than the min-age.  	|
-| gender  	| Gender mix if relevant.  	| string  	| female<br/>male<br/>mixed  	|   	|
-| languages  	| Languages a test user needs to speak at least fluently  	| string  	| de<br/>fr<br/>en<br/>it<br/>nl  	| Comma separated if multiple. Max 2.  	|
-| countries  	| Countries where the test users have to currently live at. 	| string  	| 2 digit ISO-Code - lowercase| Comma separated if multiple. Max 10.	|
-| slots  	| List of all dates when the study will be conducted 	| string  	| timestamp | Comma separated numbers |  |
-| customs  	| Special criteria for the participants. 	| string  	| Max 140 characters each | Comma separated, max 5.  |  |
+| min-age   	| Minimal age of the ordered participants.   	| number   	| 18-85  	| Is valid when combined with a max-age  	|
+| max-age  	| Maximal age of the ordered participants.  	| number  	| 18-85  	| Is valid when combined with a min-age as well. Must be at least 10 years more than the min-age.  	|
+| gender  	| Gender mix, if relevant.  	| string  	| female<br/>male<br/>mixed  	|   	|
+| languages  	| Languages a test person needs to speak (at least fluently)  	| string  	| de<br/>fr<br/>en<br/>it<br/>nl  	| Comma separated if multiple. Max 2.  	|
+| countries  	| Countries where the test persons should reside. 	| string  	| 2 digit ISO-Code - lowercase| Comma separated if multiple. Max 10.	|
+| slots  	| List of all dates when the study will be conducted 	| number  	| timestamp | Comma separated numbers |  |
+| customs  	| Special criteria for the participants. 	| string	| Maximum length of 140 characters each | Comma separated, max 5.  |  |
 | minutes  	| Duration of each study	| number  	| 10-5000 |  |  |
-| title  	| Study title	| string  	| Max 255 characters |  |  |
+| title  	| Study title	| string  	| Maximum length of 255 characters |  |  |
 | description  	| Additional information for the TestingTime recruiters	| string  	| |  |  
 | venue  	| Where does the study happen	| string  	| IN_HOME<br/>IN_HOUSE<br/>REMOTE |  |  
 | devices  	| On what devices do the participants need to be "native" at	| string  	| computer<br/>tablet<br/>phone<br/>watch | Comma separated strings | 
@@ -57,21 +57,24 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | location-company  	| Location of study - company name	| string  	| 	|
 | location-country  	| Location of study - country	| string  	| 2 digit ISO-Code - lowercase	|
 | location-instructions  	| Location of study - description how to find the location	| string  |	 | e.g. "ask at the reception for John Meyer"	|
-| duration  	| How long does it take to fill out the entire survey or unmoderated user test.	| number  |	10-500 | Only works its a survey or an unmoderated user test.	|
+| duration  	| The amount of time users need to complete a survey or unmoderated user test.	| number  |	10-500 | Only works its a survey or an unmoderated user test.	|
 | link  	| The link to the survey or unmoderated user test.	| string  |	 | Only works its a survey or an unmoderated user test. If link & priority are provided for a method type "user test" it becomes automatically an unmoderated user test.	|
-| priority  	| How fast do we need to deliver the participants	| string  |	normal<br/>express<br/>emergency | Only works its a survey or an unmoderated user test.	|
-
+| priority  	| The priority of the study (Applicable to surveys/ unmoderated user tests)	| string  |	normal<br/>express<br/>emergency | Only works its a survey or an unmoderated user test.	|
+| contact-via  	| The tool in which the remote study will take place (e.g. Skype, Google Hangouts)	| string  	| Maximum length of 120 characters	|
+| contact-via-details  	| The id of the customer for the given tool	| string  	| 	|
+| expert-exclusion  	| Plain text description of which experts to exclude (e.g. No UX designers)	| string  	| 	|
+| deadline  	| Deadline of study (Valid only for surveys/unmoderated user tests)	| timestamp  	| 	|
+| survey-by-redirect  	| Flag about whether the test person should be redirected to the survey 	| boolean  	| 	|
+| frequency  	| The frequency of entries needed for a diary (e.g. a frequency of 2 means there will be sessions every two days until the deadline)	| number  	| 	|
+| in-home-mode-of-transport  	| Customer transport means for inhome tests (possible values are CAR / PUBLIC)	| string  	| 	|
+| invite-radius  	| The radius in which to invite test persons for an inhome study	| number  	| 	|
 
 
 
 
 
 ### Not yet documented
-            "contactVia", "contactViaDetails", "expert-exclusion", 
-             "deadline",
-            "priority", "link", "survey-by-redirect", "final-survey", "frequency", 
-            "inHomeModeOfTransport",
-            "inviteRadius"
+          "final-survey"
             
 ## Hashtag navigation
 
