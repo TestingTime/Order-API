@@ -68,13 +68,7 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | frequency  	| The frequency of entries needed for a diary (e.g. a frequency of 2 means there will be sessions every two days until the deadline)	| number  	| 	|
 | in-home-mode-of-transport  	| Customer transport means for inhome tests (possible values are CAR / PUBLIC)	| string  	| 	|
 | invite-radius  	| The radius in which to invite test persons for an inhome study	| number  	| 	|
-
-
-
-
-
-### Not yet documented
-          "final-survey"
+| final-survey  	| Is there a final survey after a diary study or not.	| string  	| true	|
             
 ## Hashtag navigation
 
