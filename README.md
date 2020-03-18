@@ -34,7 +34,7 @@ Many fields on the order form can be prefilled. Here are all the supported param
 | customs  	| Special criteria for the participants. 	| string	| Maximum length of 140 characters each | Comma separated, max 5.  |  |
 | minutes  	| Duration of each study	| number  	| 10-5000 |  |  |
 | title  	| Study title	| string  	| Maximum length of 255 characters |  |  |
-| description  	| Additional information for the TestingTime recruiters	| string  	| |  |  
+| additionalInfo  	| Additional information for the TestingTime recruiters	| string  	| |  |  
 | venue  	| Where does the study happen	| string  	| IN_HOME<br/>IN_HOUSE<br/>REMOTE |  |  
 | devices  	| On what devices do the participants need to be "native" at	| string  	| computer<br/>tablet<br/>phone<br/>watch | Comma separated strings | 
 | platform  	| What OS needs to be installed on the devices	| string  	| apple<br/>android<br/>windows | Only works if "devices" is provided | 
